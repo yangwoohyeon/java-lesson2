@@ -3,11 +3,7 @@ package kr.easw.lesson2;
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- * 해당 클래스는 간단한 블랙잭 게임의 예제입니다.
- *
- * do-while로 적절한 코드를 작성하였다면, 간단한 블랙잭 게임이 진행됩니다.
- */
+
 public class DoWhileIteration {
     private static final Random random = new Random();
 
@@ -37,7 +33,9 @@ public class DoWhileIteration {
      * - do-while문을 반드시 이용해야 합니다.
      */
     private static void checkValue() {
-        throw new RuntimeException("이 코드 라인을 지우고, 이곳에서 작성하십시오.");
+        do{
+            increaseValue();
+        }while(!stopGame());
     }
 
     public static boolean stopGame() {

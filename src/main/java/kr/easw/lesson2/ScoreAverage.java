@@ -18,10 +18,17 @@ public class ScoreAverage {
         int loop = 0;
         int score = 0;
         while (true) {
+            int input = scanner.nextInt();
+            if (input == 0) {
+                break;
+            }
             loop++;
-            throw new RuntimeException("이 코드 라인을 지우고, 이곳에서 작성하십시오.");
+            score += input;
         }
-        return ((double)score) / ((double)loop);
+        if (loop == 0) {
+            return 0;
+        }
+        return ((double) score) / ((double) loop);
     }
 
     /**
@@ -36,7 +43,16 @@ public class ScoreAverage {
      * @param averageScore 평균 점수
      */
     private static String estimateGrade(double averageScore) {
-        throw new RuntimeException("이 코드 라인을 지우고, 이곳에서 작성하십시오.");
+        if (averageScore >= 90) {
+            return "A";
+        }
+        if (averageScore >= 80) {
+            return "B";
+        }
+        if (averageScore >= 70) {
+            return "C";
+        }
+        return "D";
+    }
     }
 
-}

@@ -20,7 +20,9 @@ public class ForWhileIteration {
      *  for문을 이용해, 정확히 10번 {@code runTask} 메서드를 실행해야 합니다.
      */
     private static void iterateTenTime() {
-        throw new RuntimeException("이 코드 라인을 지우고, 이곳에서 작성하십시오.");
+        for(int i=0; i<10; i++){
+            runTask();
+        }
     }
 
     /**
@@ -29,7 +31,11 @@ public class ForWhileIteration {
      */
     private static void iterateTwentyTime() {
         int iterateCounter = 0;
-        throw new RuntimeException("이 코드 라인을 지우고, 이곳에서 작성하십시오.");
+        int i=0;
+        while(i<20){
+            runTask();
+            i++;
+        }
     }
 
     private static void runTask() {
